@@ -16,6 +16,7 @@
 # Use the non-open-source part, if present
 -include vendor/b00sted/proprietary/shadow/BoardConfigVendor.mk
 
+
 # Use the part that is common between all tunas
 include device/motorola/omap34com/BoardConfig.mk
 
@@ -40,6 +41,7 @@ BOARD_OVERLAY_BASED_CAMERA_HAL := true
 # Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/shadow/kernel
 BOARD_MKE2FS := device/motorola/omap34com/releaseutils/mke2fs
+
 
 TARGET_PROVIDES_INIT_RC := true
 

@@ -6,6 +6,7 @@
 # You may obtain a copy of the License at
 #
 # http://www.apache.org/licenses/LICENSE-2.0
+
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -29,3 +30,4 @@ $(call inherit-product, device/motorola/omap34com/device.mk)
 #Call b00sted vendor
 $(call inherit-product, vendor/b00sted/configs/common.mk)
 $(call inherit-product, vendor/b00sted/proprietary/shadow/shadow-vendor.mk)
+

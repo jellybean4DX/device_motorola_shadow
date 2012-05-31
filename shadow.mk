@@ -25,6 +25,7 @@
 DEVICE_PREBUILT := device/motorola/shadow/prebuilt
 DEVICE_PACKAGE_OVERLAYS := device/motorola/shadow/overlay
 
+
 # Camera
 PRODUCT_PACKAGES := \
 	Camera
@@ -71,10 +72,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.ril.modem.ttydevice=/dev/usb/tty1-3:1.0 \
 	persist.ril.mux.noofchannels=7
 
+
 $(call inherit-product, device/motorola/omap34com/full_base_telephony.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-#Inherit device configuration
+# Inherit from shadow device
+
 $(call inherit-product, device/motorola/shadow/device.mk)
 
 # Set those variables here to overwrite the inherited values.
@@ -82,4 +85,5 @@ PRODUCT_NAME := full_shadow
 PRODUCT_DEVICE := shadow
 PRODUCT_BRAND := verizon
 PRODUCT_MODEL := DROIDX
+<<<<<<< HEAD
 PRODUCT_MANUFACTURER := Motorola

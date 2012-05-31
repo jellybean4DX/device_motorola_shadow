@@ -1,3 +1,4 @@
+
 # Boot animation
 TARGET_BOOTANIMATION_NAME := vertical-480x854
 
