@@ -25,6 +25,10 @@ ro.ril.enable.a52=0
 ro.ril.enable.a53=0
 ro.ril.enable.dtm=1
 ro.telephony.default_network=4
+
+#New Motorola Wrigley 3G RIL
+ro.telephony.ril_class=MotoWrigley3GRIL
+
 ro.com.google.clientid=android-motorola
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
