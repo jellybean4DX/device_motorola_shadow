@@ -50,13 +50,13 @@ wifi.ap.interface=tiap0
 ro.sf.lcd_density=240
 windowsmgr.max_events_per_sec=240
 ro.min_pointer_dur=10
-ro.opengles.version = 131072
+ro.opengles.version=131072
 
 ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal
 ro.mot.hw.uaprof=http://uaprof.vtext.com/mot/mb810/mb810.xml
 
 ro.service.start.smc=1
-persist.mot.usb.mediasync = 0
+persist.mot.usb.mediasync=0
 ro.ngp_available=1
 ro.modem_available=0
 persist.usb.android_config=0
