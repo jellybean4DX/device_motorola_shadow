@@ -26,10 +26,6 @@ DEVICE_PREBUILT := device/motorola/shadow/prebuilt
 DEVICE_PACKAGE_OVERLAYS := device/motorola/shadow/overlay
 
 
-# Camera
-PRODUCT_PACKAGES := \
-	Camera
-
 # Audio + Bluetooth
 PRODUCT_COPY_FILES += \
 	device/motorola/shadow/audio/libaudio.so:/system/lib/libaudio.so \
