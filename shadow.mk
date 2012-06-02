@@ -81,5 +81,4 @@ PRODUCT_NAME := full_shadow
 PRODUCT_DEVICE := shadow
 PRODUCT_BRAND := verizon
 PRODUCT_MODEL := DROIDX
-<<<<<<< HEAD
 PRODUCT_MANUFACTURER := Motorola
