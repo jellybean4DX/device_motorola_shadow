@@ -421,7 +421,7 @@ service iprenew_tiwlan0 /system/bin/dhcpcd -n
 service baseimage /system/bin/cexec.out -T /system/lib/dsp/baseimage.dof
     class main
     user media
-    group media graphics
+    group media graphics mot_whisper_audio
     oneshot
 
 service fmradio /system/bin/fmradioserver
