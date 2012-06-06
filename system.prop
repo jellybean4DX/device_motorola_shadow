@@ -137,12 +137,14 @@ persist.sys.shutdown.mode=hibernate
 dalvik.vm.dexopt-flags=v=n,o=v
 
 ro.max.fling_velocity=4000
-debug.enabletr=true
+debug.enabletr=false
 debug.egl.callstack=1
 hwui.render_dirty_regions=false
 
 # Force disable of hw renderer for the listed processes
-hwui.blacklist=com.android.vending:com.tmobile.themechooser:com.bel.android.dspmanager:com.android.mms
+# To test if blacklist will increase Stability for individual process
+# Add the app process(located in /system/app/ or data/app/) to the string
+hwui.blacklist=mobi.mgeek.TunnyBrowser:com.bel.android.dspmanager
 
 # CpuGovernorService (require ondemand cpu governor)
 dev.pm.dyn_samplingrate=1
