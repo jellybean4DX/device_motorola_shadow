@@ -141,10 +141,5 @@ debug.enabletr=false
 debug.egl.callstack=1
 hwui.render_dirty_regions=false
 
-# Force disable of hw renderer for the listed processes
-# To test if blacklist will increase Stability for individual process
-# Add the app process(located in /system/app/ or data/app/) to the string
-hwui.blacklist=mobi.mgeek.TunnyBrowser:com.bel.android.dspmanager
-
 # CpuGovernorService (require ondemand cpu governor)
 dev.pm.dyn_samplingrate=1

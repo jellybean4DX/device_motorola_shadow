@@ -92,7 +92,7 @@ on post-fs
     chmod 0770 /pds/bp_nvm
 
     # Tweaks
-    write /sys/block/mmcblk0/bdi/read_ahead_kb 2048
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 3072
 
 #    mount rootfs rootfs / ro remount
 
@@ -264,6 +264,7 @@ on boot
     insmod /system/lib/modules/modem_pm_driver.ko
     insmod /system/lib/modules/xt_tcpmss.ko
     insmod /system/lib/modules/xt_TCPMSS.ko
+    insmod /system/lib/modules/iptable_raw.ko
     insmod /system/lib/modules/iptable_mangle.ko
     insmod /system/lib/modules/xt_multiport.ko
     insmod /system/lib/modules/xt_quota2.ko
@@ -272,6 +273,7 @@ on boot
     insmod /system/lib/modules/xt_TCPMSS.ko
     insmod /system/lib/modules/iptable_mangle.ko
     insmod /system/lib/modules/ip6table_filter.ko
+    insmod /system/lib/modules/ip6table_raw.ko
     insmod /system/lib/modules/ip6table_mangle.ko
     insmod /system/lib/modules/ip6t_REJECT.ko
     insmod /system/lib/modules/ip6t_LOG.ko
@@ -412,6 +414,7 @@ service wpa_supplicant /system/bin/wpa_supplicant -Dtiwlan0 -itiwlan0 -c /data/m
     socket wpa_tiwlan0 dgram 660 wifi wifi
     disabled
     oneshot
+
 
 service hostapd /system/bin/logwrapper.bin /system/bin/hostapd -d /data/misc/wifi/hostapd.conf
     class main
