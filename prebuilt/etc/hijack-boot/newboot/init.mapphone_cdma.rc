@@ -263,7 +263,6 @@ on boot
     insmod /system/lib/modules/netmux_linkdriver.ko
     insmod /system/lib/modules/modem_pm_driver.ko
     insmod /system/lib/modules/iptable_raw.ko
-#    insmod /system/lib/modules/iptable_mangle.ko
     insmod /system/lib/modules/xt_multiport.ko
     insmod /system/lib/modules/xt_quota2.ko
     insmod /system/lib/modules/xt_owner2.ko
@@ -271,7 +270,6 @@ on boot
     insmod /system/lib/modules/xt_TCPMSS.ko
     insmod /system/lib/modules/ip6table_filter.ko
     insmod /system/lib/modules/ip6table_raw.ko
-#    insmod /system/lib/modules/ip6table_mangle.ko
     insmod /system/lib/modules/ip6t_REJECT.ko
     insmod /system/lib/modules/ip6t_LOG.ko
     insmod /system/lib/modules/sio-iosched.ko
@@ -430,7 +428,7 @@ service iprenew_tiwlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service baseimage /system/bin/cexec.out -T /system/lib/dsp/baseimage.dof
+service baseimage /system/bin/dspexec -T /system/lib/dsp/baseimage.dof
     class main
     user media
     group media graphics
