@@ -2,9 +2,6 @@
 # system.prop for CDMA Shadow
 #
 
-#New Motorola Wrigley 3G RIL
-ro.telephony.ril_class=MotoWrigley3GRIL
-
 rild.libpath=/system/lib/libmoto_ril.so
 rild.libargs=-d /dev/ttyS0
 ro.mot.ril.danlist=611,*611,#611
@@ -26,13 +23,15 @@ ro.ril.enable.fd.plmn.prefix=23402,23410,23411
 ro.ril.disable.power.collapse=0
 ro.ril.enable.a52=0
 ro.ril.enable.a53=0
+
+#New Motorola Wrigley 3G RIL
+ro.telephony.ril_class=MotoWrigley3GRIL
+
 ro.ril.enable.dtm=0
 ro.telephony.default_network=4
 ro.com.google.clientid=android-motorola
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
-ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal
-ro.mot.hw.uaprof=http://uaprof.vtext.com/mot/mb810/mb810.xml
 ro.cdma.home.operator.numeric=310004
 ro.cdma.home.operator.alpha=Verizon
 ro.config.vc_call_vol_steps=7
@@ -47,28 +46,48 @@ ro.mot.eri=1
 ro.mot.eri.losalert.delay=2000
 ro.mot.eri.sidalert.delay=1000
 
+#Comment this out to test bg wifi scan
+#wifi.supplicant_scan_interval=250
+
+wifi.interface=tiwlan0
+wifi.hotspot.ti=1
+wifi.ap.interface=tiap0
+
+ro.sf.lcd_density=240
+windowsmgr.max_events_per_sec=240
+ro.min_pointer_dur=10
+ro.opengles.version=131072
+
+ro.url.safetylegal=http://www.motorola.com/staticfiles/Support/legal
+ro.mot.hw.uaprof=http://uaprof.vtext.com/mot/mb810/mb810.xml
+
 ro.service.start.smc=1
 persist.mot.usb.mediasync=0
 ro.ngp_available=1
 ro.modem_available=0
+persist.usb.android_config=0
+ro.usb.use_custom_service=1
 persist.sys.usb.config=mass_storage,adb
 ro.default_usb_mode=2
 ro.mot.master_clear.shredsd=false
 
-#proximity/button 
 ro.mot.buttonlight.timeout=1
 persist.mot.proximity.touch=1
 mot.proximity.delay=90
 mot.proximity.distance=60
 
+
 ro.HorizontalBUA=false
 ro.HorizontalVVM=false
+ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
+ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
 
-#media
+
 ro.media.capture.flip=horizontalandvertical
 ro.mot.hw.calibratedImager=1
 ro.config.play.bootsound=0
 ro.media.sensor.orient=90
+
 # Camera (settings from GB originally)
 ro.media.camcorder.d1NTSC=3gp,h264,30,6000000,aac,96000,44100,2
 ro.media.camcorder.vga=3gp,h264,30,4000000,aac,96000,44100,2
@@ -88,33 +107,45 @@ ro.media.capture.noSensorLSC=1
 ro.media.panorama.defres=2048x1536
 ro.media.panorama.frameres=1280x720
 
-#b00sted tweaks
-net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960 
-net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960 
-net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960 
-net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960 
+ro.product.use_charge_counter=1
+
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
 net.tcp.buffersize.hsdpa=4096,87380,256960,4096,16384,256960
-net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960 
-ro.ext4fs=1   
-ro.min.fling_velocity=8000 
-ro.max.fling_velocity=12000 
-ro.wmt.blcr.enable=0 
-dalvik.vm.verify-bytecode=false 
-dalvik.vm.dexopt-data-only=0
-persist.android.strictmode=0 
-ro.secure=0 
-persist.sys.purgeable_assets=1 
-ro.media.enc.jpeg.quality=100 
-ro.media.dec.jpeg.memcap=8000000 
-ro.media.enc.hprof.vid.bps=8000000 
-media.stagefright.enable-player=true 
-media.stagefright.enable-meta=true 
-media.stagefright.enable-scan=true 
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+ro.ext4fs=1
+ro.kernel.android.checkjni=0 
+ro.min.fling_velocity=8000
+ro.max.fling_velocity=12000
+ro.wmt.blcr.enable=0
+persist.android.strictmode=0
+ro.secure=0
+persist.sys.purgeable_assets=1
+ro.media.enc.jpeg.quality=100
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
 media.stagefright.enable-http=true
-ro.media.enc.hprof.vid.fps=65 
-persist.sys.shutdown.mode=hibernate 
+ro.media.enc.hprof.vid.fps=65
+persist.sys.shutdown.mode=hibernate
+dalvik.vm.heapgrowthlimit=32m
+dalvik.vm.heapsize=64m
+dalvik.vm.verify-bytecode=false
+dalvik.vm.dexopt-data-only=0
 dalvik.vm.dexopt-flags=v=n,o=v
+
+ro.max.fling_velocity=4000
+debug.enabletr=false
+debug.egl.callstack=1
 
 # CpuGovernorService (require ondemand cpu governor)
 dev.pm.dyn_samplingrate=1
 
+# Define JPEG codec to load. (Set libskiahw with 1 & Set ARM with 0)
+jpeg.libskiahw.decoder.enable=1
+# Define JPEG Threashold for Image size (bytes)
+jpeg.libskiahw.decoder.thresh=100000
