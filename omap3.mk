@@ -28,9 +28,6 @@
 # Make this equal to your OMAP3 device name
 DEVICE := shadow
 
-# Libs
-PRODUCT_PACKAGES += \
-        libomap_mm_library_jni
 
 # Hardware composer configuration
 PRODUCT_COPY_FILES += \
