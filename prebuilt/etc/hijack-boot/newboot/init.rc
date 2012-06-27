@@ -99,7 +99,7 @@ on post-fs
 
 # Right now vendor lives on the same filesystem as system,
 # but someday that may change.
-#    symlink /system/vendor /vendor
+    symlink /system/vendor /vendor
 
     # once everything is setup, no need to modify /
 #    mount rootfs rootfs / ro remount
