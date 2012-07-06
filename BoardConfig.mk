@@ -40,7 +40,6 @@ TARGET_PROVIDES_LIBAUDIO := true
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/shadow/kernel
 BOARD_MKE2FS := device/motorola/omap34com/releaseutils/mke2fs
 
-
 TARGET_PROVIDES_INIT_RC := true
 
 # UMS

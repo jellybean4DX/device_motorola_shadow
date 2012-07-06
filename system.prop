@@ -53,6 +53,7 @@ wifi.interface=tiwlan0
 wifi.hotspot.ti=1
 wifi.ap.interface=tiap0
 
+
 ro.sf.lcd_density=240
 windowsmgr.max_events_per_sec=240
 ro.min_pointer_dur=10
@@ -149,3 +150,6 @@ dev.pm.dyn_samplingrate=1
 jpeg.libskiahw.decoder.enable=1
 # Define JPEG Threashold for Image size (bytes)
 jpeg.libskiahw.decoder.thresh=100000
+ro.max.fling_velocity=4000
+debug.enabletr=false
+
