@@ -41,6 +41,13 @@ PRODUCT_PACKAGES += \
 	hciattach \
 	hcidump
 
+PRODUCT_PACKAGES += \
+        hijack-boot.zip
+	  	
+# Hijack files 	
+PRODUCT_COPY_FILES += \
+        $(DEVICE_PREBUILT)/etc/hijack-boot.zip:system/etc/hijack-boot.zip
+
 #Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/motorola/shadow/kernel
