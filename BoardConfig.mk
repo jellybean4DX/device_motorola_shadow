@@ -42,6 +42,11 @@ BOARD_MKE2FS := device/motorola/omap34com/releaseutils/mke2fs
 
 TARGET_PROVIDES_INIT_RC := true
 
+#HIJACK
+TARGET_PROVIDES_HIJACK_ZIPPER := true
+TARGET_HIJACK_ZIPPER := device/motorola/shadow/prebuilt/etc/hijack-boot/pack-newboot.sh
+
+
 # UMS
 BOARD_MASS_STORAGE_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
