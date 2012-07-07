@@ -43,7 +43,6 @@ BOARD_MKE2FS := device/motorola/omap34com/releaseutils/mke2fs
 TARGET_PROVIDES_INIT_RC := true
 
 #HIJACK
-TARGET_PROVIDES_HIJACK_ZIPPER := true
 TARGET_HIJACK_ZIPPER := device/motorola/shadow/prebuilt/etc/hijack-boot/pack-newboot.sh
 
 
