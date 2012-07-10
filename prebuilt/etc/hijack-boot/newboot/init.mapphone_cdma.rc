@@ -239,18 +239,15 @@ on boot
 
     # Core
     insmod /system/lib/modules/symsearch.ko
-    insmod /system/lib/modules/klogger.ko
     insmod /system/lib/modules/thumbee.ko
 
     # Graphics
-    #insmod /system/lib/modules/pvroff.ko pvrmajor=247
-    insmod /system/lib/modules/pvroff.ko
+    insmod /system/lib/modules/pvroff.ko pvrmajor=247
     write /sys/devices/platform/omapdss/overlay0/enabled 0
     write /sys/devices/platform/omapfb/graphics/fb0/size 4194304
     write /sys/devices/platform/omapdss/overlay0/enabled 1
     insmod /system/lib/modules/pvrsrvkm.ko
     insmod /system/lib/modules/omaplfb.ko
-	
     chmod 0666 /dev/pvrsrvkm
     exec /system/bin/pvrsrvinit
 
