@@ -85,7 +85,7 @@ int Kxtf9Sensor::enable(int32_t handle, int en)
         int flags = newState;
         err = ioctl(dev_fd, KXTF9_IOCTL_SET_ENABLE, &flags);
         err = err<0 ? -errno : 0;
-        LOGE_IF(err, "KXTF9_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
+        ALOGE_IF(err, "KXTF9_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
 
         if (!err) {
             mEnabled = newState;
@@ -135,7 +135,7 @@ int Kxtf9Sensor::readEvents(sensors_event_t* data, int count)
             count--;
             numEventReceived++;
         } else {
-            LOGE("Kxtf9Sensor: unknown event (type=%d, code=%d)",
+            ALOGE("Kxtf9Sensor: unknown event (type=%d, code=%d)",
                     type, event->code);
         }
         mInputReader.next();
